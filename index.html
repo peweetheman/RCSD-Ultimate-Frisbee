@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RCSD Ultimate Frisbee Team</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(102, 126, 234, 0.9), rgba(118, 75, 162, 0.9)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><circle cx="200" cy="200" r="150" fill="%23ffffff" opacity="0.1"/><circle cx="800" cy="250" r="120" fill="%23ffffff" opacity="0.1"/><circle cx="1000" cy="150" r="100" fill="%23ffffff" opacity="0.1"/></svg>');
+            background-size: cover;
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-content {
+            font-size: 1.1rem;
+        }
+
+        .info-box {
+            background: #f8f9fa;
+            border-left: 5px solid #667eea;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .info-box h3 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .practice-details {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin: 2rem 0;
+        }
+
+        .practice-details h3 {
+            color: #764ba2;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .detail-item {
+            padding: 1rem;
+            margin: 0.5rem 0;
+            background: #f8f9fa;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+        }
+
+        .detail-item strong {
+            color: #667eea;
+            min-width: 120px;
+            font-size: 1.1rem;
+        }
+
+        .coaches {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .coaches h3 {
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .coach-names {
+            font-size: 1.3rem;
+            font-weight: 500;
+        }
+
+        .why-ultimate {
+            margin: 2rem 0;
+        }
+
+        .why-ultimate h3 {
+            color: #764ba2;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .benefit-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .benefit-card h4 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .free-banner {
+            background: #10b981;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            font-size: 1.5rem;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        footer {
+            background: #2d3748;
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .hero h2 {
+                font-size: 1.5rem;
+            }
+
+            .benefits {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🥏 RCSD Ultimate Frisbee Team</h1>
+    </header>
+
+    <div class="container">
+        <div class="info-box" style="text-align: center; background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; border: none; padding: 2.5rem 2rem;">
+            <h3 style="color: white; font-size: 2.5rem; margin-bottom: 1rem;">🎉 COMPLETELY FREE TO JOIN! 🎉</h3>
+            <p style="font-size: 1.2rem; margin-bottom: 1.5rem; opacity: 0.95;">No fees, no equipment - just show up and play!</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdcPpWk2ocXDkly6jVpjhFCe5xXfQDFLw78nJKkxisxOqpwMg/viewform?usp=dialog" target="_blank" style="display: inline-block; background: white; color: #10b981; padding: 1.2rem 3rem; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 1.3rem; box-shadow: 0 4px 6px rgba(0,0,0,0.2); transition: transform 0.3s ease;">
+                📝 Sign Up Now!
+            </a>
+            <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.9;">Registration takes less than 2 minutes</p>
+        </div>
+
+        <div class="practice-details">
+            <h3>📅 First Practice</h3>
+            <div class="detail-item">
+                <strong>Date:</strong>
+                <span>Saturday, March 21st</span>
+            </div>
+            <div class="detail-item">
+                <strong>Time:</strong>
+                <span>10:00 AM</span>
+            </div>
+            <div class="detail-item">
+                <strong>Location:</strong>
+                <span>Cobbs Hill Park (<a href="https://maps.app.goo.gl/Y1dc4SA9ecQoNbSh9" target="_blank" style="color: #667eea; text-decoration: none; font-weight: bold;">View Map</a>)</span>
+            </div>
+            <div class="detail-item">
+                <strong>Cost:</strong>
+                <span>FREE - No fees whatsoever!</span>
+            </div>
+        </div>
+
+        <div class="coaches">
+            <h3>👥 Your Coaches</h3>
+            <div class="coach-names">
+                <p>Michaela Chan</p>
+                <p>Patrick Phillips</p>
+            </div>
+        </div>
+
+        <div class="practice-details">
+            <h3>📋 Season Information</h3>
+            <div class="detail-item">
+                <strong>Who Can Join:</strong>
+                <span>All RCSD high school students (grades 9-12)</span>
+            </div>
+            <div class="detail-item">
+                <strong>Season:</strong>
+                <span>April - June</span>
+            </div>
+            <div class="detail-item">
+                <strong>Practices:</strong>
+                <span>Twice per week</span>
+            </div>
+            <div class="detail-item">
+                <strong>Games:</strong>
+                <span>Sundays</span>
+            </div>
+        </div>
+
+        <div class="info-box" style="text-align: center; background: #ffc107; color: #333; border-left: 5px solid #ff9800; margin-top: 2rem;">
+            <h3 style="color: #333;">📄 Required: Parent Permission Form</h3>
+            <p style="margin: 1rem 0;">All participants must bring a signed parent permission form to the first practice.</p>
+            <a href="permission_form.pdf" download style="display: inline-block; background: #667eea; color: white; padding: 0.8rem 1.5rem; text-decoration: none; border-radius: 5px; font-weight: bold; margin-top: 0.5rem;">
+                Download Permission Form
+            </a>
+        </div>
+
+        <div class="info-box">
+            <h3>Questions?</h3>
+            <p style="font-size: 1.1rem;">Contact us at: <a href="mailto:patrickwillwin@gmail.com" style="color: #667eea; text-decoration: none; font-weight: bold;">patrickwillwin@gmail.com</a></p>
+            <p style="margin-top: 0.5rem; color: #666;">We're happy to answer any questions about the team, practices, or ultimate frisbee in general!</p>
+        </div>
+
+        <div class="why-ultimate">
+            <h3>Why Ultimate Frisbee?</h3>
+            <p>Ultimate is more than just a sport—it's a community built on respect, fun, and athletic excellence. Here's what makes it special:</p>
+            
+            <div class="benefits">
+                <div class="benefit-card">
+                    <h4>🏃 Great Exercise</h4>
+                    <p>Combines running, jumping, and strategic thinking for a full-body workout that never feels boring.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <h4>🤝 Spirit of the Game</h4>
+                    <p>Ultimate is self-refereed and emphasizes sportsmanship, respect, and fair play above all else.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <h4>👫 Inclusive Community</h4>
+                    <p>Everyone is welcome! Ultimate values diversity and creates a supportive environment for all skill levels.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <h4>🧠 Strategic Gameplay</h4>
+                    <p>Learn offensive and defensive strategies while developing teamwork and communication skills.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <h4>🌟 Life Skills</h4>
+                    <p>Build leadership, integrity, and conflict resolution skills that extend far beyond the field.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <h4>🎯 Fast-Paced Fun</h4>
+                    <p>Non-stop action with no downtime—you're always involved in the play, making it incredibly exciting!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <h3>What to Bring</h3>
+            <ul style="list-style-position: inside; line-height: 2;">
+                <li>Athletic shoes (cleats recommended but not required)</li>
+                <li>Water bottle</li>
+                <li>Comfortable athletic clothing</li>
+                <li>Positive attitude and readiness to have fun!</li>
+            </ul>
+        </div>
+
+        <div class="info-box">
+            <h3>No Experience Necessary!</h3>
+            <p>Never thrown a frisbee before? No problem! Our coaches will teach you everything you need to know, from basic throws to advanced strategies. Ultimate is easy to learn but offers endless opportunities to grow and improve.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 RCSD Ultimate Frisbee Team</p>
+        <p>See you on the field! 🥏</p>
+    </footer>
+</body>
+</html>
